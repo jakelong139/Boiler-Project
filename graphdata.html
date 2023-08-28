@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Graph Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Graph Data</h1>
+    <canvas id="dataChart"></canvas>
+    <script>
+        var pressures = [10, 12, 14, 16, 18, 20];
+        var temperatures = [180, 200, 220, 240, 250, 260];
+        
+        var canvas = document.getElementById('dataChart');
+        
+        var dataChart = new Chart(canvas, {
+            type: 'line', 
+            data: {
+                labels: ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5', 'Data 6'],
+                datasets: [{
+                    label: 'Pressure',
+                    data: pressures,
+                    borderColor: 'blue',
+                    backgroundColor: 'rgba(0, 0, 255, 0.2)',
+                    fill: true
+                }, {
+                    label: 'Temperature',
+                    data: temperatures,
+                    borderColor: 'red',
+                    backgroundColor: 'rgba(255, 0, 0, 0.2)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+

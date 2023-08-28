@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Change Boiler Data</title>
+</head>
+<body>
+    <h1>Boiler Information Update:</h1>
+    <form>
+        <label for="newBoilerId">New Boiler ID:</label>
+        <input type="number" id="newBoilerId" name="newBoilerId" required><br>
+
+        <label for="newDop">New Date of Purchase:</label>
+        <input type="date" id="newDop" name="newDop" required><br>
+
+        <label for="newMaxPressure">New Max Allowable Pressure:</label>
+        <input type="number" id="newMaxPressure" name="newMaxPressure" required><br>
+
+        <label for="newMaxTemperature">New Max Allowable Temperature:</label>
+        <input type="number" id="newMaxTemperature" name="newMaxTemperature" required><br>
+
+        <button type="button" onclick="changeBoilerInfo()">Save Changes</button>
+    </form>
+</body>
+<script src="js/script.js"></script>
+</html>

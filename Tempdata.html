@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+            <title>
+                Temperature and Pressure data
+            </title>
+    </head>
+    <body>
+        <h1> Temperature and Pressure data</h1>
+        <form>
+            <label for="temperature">Temperature:</label>
+            <input type="number" id="temperature" name="temperature" required><br>
+    
+            <label for="pressure">Pressure:</label>
+            <input type="number" id="pressure" name="pressure" required><br>
+    
+            <button type="button" onclick="saveData()">Save Data</button>
+        </form>
+        <script>
+            function saveData() {
+                var temperature = document.getElementById("temperature").value;
+                var pressure = document.getElementById("pressure").value;
+                
+                alert("Data saved successfully!");
+            }
+        </script>
+    </body>
+</html>
